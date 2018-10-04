@@ -7,4 +7,4 @@ linkerlid = abs(x) - abs(y)
 rechterlid = abs(x -4 y)
 
 # uitvoer
-print('{:.4f} ≤ {:.4f}'.format(linkerlid, rechterlid))
+print('{:.4f} ≤ {:.4f}'.format(linkerlid, rechterli))
