@@ -1,18 +1,16 @@
 hendel_trekken = str(input('trek aan de hendel van de wissel (ja/nee) '))
 man_duwen = input('man van brug duwen ')
 
-if hendel_trekken == 'ja':
-    if man_duwen == 'ja':
-        doden = 2
+if hendel_trekken == 'ja' and man_duwen == 'ja':
+    doden = 2
 
-    else:
-        doden = 1
+elif hendel_trekken == 'nee' and man_duwen == 'nee':
+    doden = 5
 
-if hendel_trekken == 'nee':
-    if man_duwen == 'ja':
-        doden = 1
+else:
+    doden = 1
 
-    else:
-        doden = 5
+print(doden)
 
-print(str(doden))
+# elif (hendel_trekken == 'nee' and man_duwen == 'ja') or (hendel_trekken == 'ja' and man_duwen == 'nee')
+#elif hendel_trekken != man_duwen
