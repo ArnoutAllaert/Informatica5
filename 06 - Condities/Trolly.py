@@ -1,16 +1,18 @@
 hendel_trekken = str(input('trek aan de hendel van de wissel (ja/nee) '))
-dikzak = input('man van brug duwen ')
+man_duwen = input('man van brug duwen ')
 
 if hendel_trekken == 'ja':
-    if dikzak == 'ja':
-        print('2')
+    if man_duwen == 'ja':
+        doden = 2
 
     else:
-        print('1')
+        doden = 1
 
 if hendel_trekken == 'nee':
-    if dikzak == 'ja':
-        print('1')
+    if man_duwen == 'ja':
+        doden = 1
 
     else:
-        print('5')
+        doden = 5
+
+print(str(doden))
