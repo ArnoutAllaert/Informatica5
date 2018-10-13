@@ -18,7 +18,7 @@ if a >= b and a >= c:
         if (b > d or b > e) or (c > d or c > e):
             uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
         elif (b <= d or b <= e) or (c <= d or c <= e):
-        uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
+            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
     if a == d:
         if b > e or c > e:
             uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
