@@ -6,12 +6,15 @@ c = float(input('aantal ogen dobbelsteen: '))
 d = float(input('aantal ogen dobbelsteen: '))
 e = float(input('aantal ogen dobbelsteen: '))
 
-if a > b and a > c:
+if a >= b and a >= c:
     if a > d and a > e:
         if (b > d and b > e) or (c > d and c > e):
             uitkomst = 'aanvaller verliest 0 legers, verdediger verliest 2 legers'
         if (b < d and b < e) or (c < d and c < e):
             uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
+        if (b == d or b == e) or (c == d or c == e):
+            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
+
     if a < d and a < e:
         uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 leger'
     if a == d:
@@ -25,12 +28,14 @@ if a > b and a > c:
         if b <= d or c <= d:
             uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 leger'
 
-if b > a and b > c:
+if b >= a and b >= c:
     if b > d and b > e:
         if (a > d and a > e) or (c > d and c > e):
             uitkomst = 'aanvaller verliest 0 legers, verdediger verliest 2 legers'
         if (a < d and a < e) or (c < d and c < e):
             uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
+        if (a == d or a == e) or (c == d or c == e):
+                uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
     if b < d and b < e:
         uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 leger'
     if b == d:
@@ -44,11 +49,13 @@ if b > a and b > c:
         if a <= d or c <= d:
             uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 leger'
 
-if c > a and c > b:
+if c >= a and c >= b:
     if c > d and c > e:
         if (a > d and a > e) or (b > d and b > e):
             uitkomst = 'aanvaller verliest 0 legers, verdediger verliest 2 legers'
         if (a < d and a < e) or (b < d and b < e):
+            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
+        if (a == d or a == e) or (b == d or b == e):
             uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
     if c < d and c < e:
         uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 leger'
