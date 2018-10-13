@@ -44,7 +44,7 @@ if b >= a and b >= c:
         elif (a <= d or a <= e) or (c <= d or c <= e):
             uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
     if b == d:
-        if a > d or c > d:
+        if a > e or c > e:
             uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
         elif a <= e or c <= e:
             uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
