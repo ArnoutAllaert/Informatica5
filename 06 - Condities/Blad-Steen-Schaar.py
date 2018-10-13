@@ -1,6 +1,6 @@
 # invoer
-x = str(input('blad,stten,schaar: '))
-y = str(input('blad,stten,schaar: '))
+x = str(input('blad, stten, schaar: '))
+y = str(input('blad, stten, schaar: '))
 
 #bewerking
 if x == y:
