@@ -14,7 +14,6 @@ if a >= b and a >= c:
             uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
         elif (b == d or b == e) or (c == d or c == e):
             uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-
     if a < d and a < e:
         uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
     if a == d:
@@ -35,11 +34,14 @@ if b >= a and b >= c:
         elif (a < d or a < e) or (c < d or c < e):
             uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
         elif (a == d or a == e) or (c == d or c == e):
-                uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-    if b < d and b < e:
-        uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
+            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
+    if b < d or b < e:
+        if (a > d or a > e) or (c > d or c > e):
+            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
+        elif (a <= d or a <= e) or (c <= d or c <= e):
+            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
     if b == d:
-        if a > e or c > e:
+        if a > d or c > d:
             uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
         elif a <= e or c <= e:
             uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
