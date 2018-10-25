@@ -3,12 +3,13 @@ from math import sqrt
 x = float(input('Geef x∈R: '))
 
 #bewerking
+
 if x < 2:
-    mes = str(round(x, 2)) + ' is ∉ dom(f)'
+    mes = '{:.2f}{}'.format(x, ' is ∉ dom(f)')
 elif sqrt(x - 2) == 0:
-    mes = str(round(x,2)) + ' is nulpunt van f'
+    mes = '{:.2f}{}'.format(x, ' is nulpunt van f')
 else:
-    mes = 'f(' + str(round(x, 2)) + ') = ' + str(round(sqrt(x - 2),2))
+    mes = '{}{:.2f}{}{:.2f}'.format('f(', x ,') = ', sqrt(x - 2))
 
 #uitvoer
 print(mes)
