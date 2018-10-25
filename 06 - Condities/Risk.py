@@ -13,9 +13,9 @@ sv1 = max(v1, v2)
 sv2 = min(v1, v2)
 
 #winnaar bepalen
-if sa1 > sa2 and sa2 > sv2
+if sa1 > sa2 and sa2 > sv2:
     mes = 'aanvaller verliest 0 legers, verdediger verliest 2 legers'
-elif sv2 >= sa1 and sv2 >= sa2
+elif sv2 >= sa1 and sv2 >= sa2:
     mes = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
 else:
     mes = 'aanvaller verliest 1eger, verdediger verliest 1eger'
