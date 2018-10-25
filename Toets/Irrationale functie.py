@@ -5,7 +5,7 @@ x = float(input('Geef x∈R: '))
 #bewerking
 
 if x < 2:
-    mes = '{:.2f}{}'.format(x, ' is ∉ dom(f)')
+    mes = '{:.2f}{}'.format(x, ' ∉ dom(f)')
 elif sqrt(x - 2) == 0:
     mes = '{:.2f}{}'.format(x, ' is nulpunt van f')
 else:
