@@ -10,9 +10,9 @@ pa = min((da * va)/40,1)
 
 if min(pv,pa) > 0.7:
     mes = 'zwart'
-elif max(pv,pa) > 0.7 and pv - pa < 0.2:
+elif max(pv,pa) > 0.7 and abs(pv - pa) < 0.2:
     mes = 'rood'
-elif pv - pa > 0.7:
+elif abs(pv - pa) > 0.7:
     mes = 'geel'
 else:
     mes = 'groen'
