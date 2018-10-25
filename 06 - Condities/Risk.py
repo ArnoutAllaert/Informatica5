@@ -1,82 +1,24 @@
 # invoer
-a = float(input('aantal ogen dobbelsteen: '))
-b = float(input('aantal ogen dobbelsteen: '))
-c = float(input('aantal ogen dobbelsteen: '))
+a1 = int(input('aantal ogen dobbelsteen: '))
+a2 = int(input('aantal ogen dobbelsteen: '))
+a3 = int(input('aantal ogen dobbelsteen: '))
+v1 = int(input('aantal ogen dobbelsteen: '))
+v2 = int(input('aantal ogen dobbelsteen: '))
 
-d = float(input('aantal ogen dobbelsteen: '))
-e = float(input('aantal ogen dobbelsteen: '))
+#sorteren
+sa1 = max(a1, a2, a3)
+sa2 = a1 + a2 + a3 - sa1 - min(a1, a2, a3)
 
-if a >= b and a >= c:
-    if a > d or a > e:
-        if (b > d or b > e) or (c > d or c > e):
-            uitkomst = 'aanvaller verliest 0 legers, verdediger verliest 2 legers'
-        elif (b < d or b < e) or (c < d or c < e):
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif (b == d or b == e) or (c == d or c == e):
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-    if a < d or a < e:
-        if (b > d or b > e) or (c > d or c > e):
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif (b <= d or b <= e) or (c <= d or c <= e):
-            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
-    if a == d:
-        if b > e or c > e:
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif b <= e or c <= e:
-            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
-    if a == e:
-        if b > d or c > d:
-            uitkomst= 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif b <= d or c <= d:
-            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
+sv1 = max(v1, v2)
+sv2 = min(v1, v2)
 
-if b >= a and b >= c:
-    if b > d or b > e:
-        if (a > d or a > e) or (c > d or c > e):
-            uitkomst = 'aanvaller verliest 0 legers, verdediger verliest 2 legers'
-        elif (a < d or a < e) or (c < d or c < e):
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif (a == d or a == e) or (c == d or c == e):
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-    if b < d or b < e:
-        if (a > d or a > e) or (c > d or c > e):
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif (a <= d or a <= e) or (c <= d or c <= e):
-            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
-    if b == d:
-        if a > e or c > e:
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif a <= e or c <= e:
-            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
-    if b == e:
-        if a > d or c > d:
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif a <= d or c <= d:
-            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
+#winnaar bepalen
+if sa1 > sa2 and sa2 > sv2
+    mes = 'aanvaller verliest 0 legers, verdediger verliest 2 legers'
+elif sv2 >= sa1 and sv2 >= sa2
+    mes = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
+else:
+    mes = 'aanvaller verliest 1eger, verdediger verliest 1eger'
 
-if c >= a and c >= b:
-    if c > d or c > e:
-        if (a > d or a > e) or (b > d or b > e):
-            uitkomst = 'aanvaller verliest 0 legers, verdediger verliest 2 legers'
-        elif (a < d or a < e) or (b < d or b < e):
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif (a == d or a == e) or (b == d or b == e):
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-    if c < d or c < e:
-        if (a > d or a > e) or (b > d or b > e):
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif (a <= d or a <= e) or (b <= d or b <= e):
-            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
-    if c == d:
-        if a > e or b > e:
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif a <= e or b <= e:
-            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
-    if c == e:
-        if a > d or b > d:
-            uitkomst = 'aanvaller verliest 1 leger, verdediger verliest 1 leger'
-        elif a <= d or b <= d:
-            uitkomst = 'aanvaller verliest 2 legers, verdediger verliest 0 legers'
-
-# uitvoer
-print(uitkomst)
+#uitvoer
+print(mes)
