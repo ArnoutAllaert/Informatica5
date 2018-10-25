@@ -6,10 +6,10 @@ y = str(input('blad, steen, schaar: '))
 if x == y:
     uitkomst = 'onbeslist'
 
-if (x == 'blad' and y == 'steen') or (x == 'steen' and y == 'schaar') or (x == 'schaar' and y == 'blad'):
+elif (x == 'blad' and y == 'steen') or (x == 'steen' and y == 'schaar') or (x == 'schaar' and y == 'blad'):
     uitkomst = 'speler 1 wint'
 
-if (x == 'steen' and y == 'blad') or (x == 'schaar' and y == 'steen') or (x == 'blad' and y == 'schaar'):
+else:
     uitkomst = 'speler 2 wint'
 
 # uitvoer
