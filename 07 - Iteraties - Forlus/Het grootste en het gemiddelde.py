@@ -13,4 +13,4 @@ for i in range(getallen):
     gemiddelde = round((som / getallen), 2)
 
 #uitvoer
-print('{} {:d} {} {:.2f}'.format('Het grootste getal is ', nieuw_max ,' en het gemiddelde is ', gemiddelde))
+print('{} {:d} {} {:.2f}'.format('Het grootste getal is ', nieuw_max ,' en het gemiddelde is ', gemiddelde)
