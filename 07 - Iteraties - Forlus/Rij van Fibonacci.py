@@ -1,18 +1,12 @@
 #invoer
-x = int(input('getal: '))
+n = int(input('hoeveelste getal van Fibonacci: '))
+
+vorige, huidige = 1, 1
 
 #bewerking
-if x == 0:
-    uitkomst = 0
-elif x == 1 or x == 2:
-    uitkomst = 1
-elif x > 2:
-    def fib(n):
-        a,b = 1,1
-        for _ in range(n-1):
-            a,b = b,a+b
-        return a
-    uitkomst=(fib(x))
+for i in range(n - 2):
+    vorige , huidige = huidige, huidige + vorige
+
 
 #uivoer
-print(uitkomst)
+print(huidige)
