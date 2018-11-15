@@ -1,15 +1,14 @@
 #invoer
 getallen= int(input('aantal getallen xi∈Z: '))
-max = -87304958934789679237595637846586
-som = 0
+max = int(input('getak: '))
+som = max
 
 #bewerking
-for i in range(getallen):
+for i in range(getallen - 1):
     getal = int(input('getal: '))
+    som += getal
+    gemiddelde = som / getallen
     if getal > max:
         max = getal
-    som += getal
-    gemiddelde = round((som / getallen), 2)
-
 #uitvoer
-print('{} {:d} {} {:.2f}'.format('Het grootste getal is ', max ,' en het gemiddelde is ', gemiddelde))
+print('Het grootste getal is {} en het gemiddelde is {:.2f}'.format( max, gemiddelde))
