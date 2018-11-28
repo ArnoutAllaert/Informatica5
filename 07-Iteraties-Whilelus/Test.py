@@ -8,6 +8,8 @@ while getal % deler != 0 and getal != 1:
     deler += 1
 
 if deler == getal:
-    print('priemgetal')
+    mes='priemgetal'
 else:
-    print('geen priemgetal')
+    mes='geen priemgetal'
+
+print(mes)
