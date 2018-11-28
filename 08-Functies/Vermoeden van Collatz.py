@@ -23,4 +23,3 @@ def collatz(n):
         collatz += 1
 
     return collatz
-print(collatz(12))
