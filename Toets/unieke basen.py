@@ -1,12 +1,10 @@
 #invoer
 basen = int(input('Geef aantal basen: '))
-ketting = ''
 dna = ''
 soort = 0
 #bewerking
 for i in range(basen):
     base = str(input('Geef een base: '))
-    ketting += base
     if base not in dna:
         dna += base + ' '
 
