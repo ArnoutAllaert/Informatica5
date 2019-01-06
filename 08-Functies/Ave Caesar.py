@@ -1,5 +1,5 @@
 def is_letter(n):
-    if n in 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' or n in 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z':
+    if n in 'abcdefghijklmnopqrstuvwxyz' or n in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
         waarheid = True
     else:
         waarheid = False
@@ -8,19 +8,19 @@ def is_letter(n):
 
 def roteer_letter(n, k):
     def is_letter(n):
-        if n in 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' or n in 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z':
+        if n in 'abcdefghijklmnopqrstuvwxyz' or n in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
             waarheid = True
         else:
             waarheid = False
         return waarheid
     if is_letter(n) == True:
-        if n in 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z':
+        if n in 'abcdefghijklmnopqrstuvwxyz':
             if ord(n) + k > 122:
                 return chr((ord(n) + k) - 26)
             else:
                 return chr(ord(n) + k)
 
-        elif n in 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z':
+        elif n in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
             if ord(n) + k > 90:
                 return chr((ord(n) + k) - 26)
             else:
@@ -33,20 +33,20 @@ def roteer_letter(n, k):
 def versleutel(z, k):
         def roteer_letter(n, k):
             def is_letter(n):
-                if n in 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' or n in 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z':
+                if n in 'abcdefghijklmnopqrstuvwxyz' or n in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
                     waarheid = True
                 else:
                     waarheid = False
                 return waarheid
 
             if is_letter(n) == True:
-                if n in 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z':
+                if n in 'abcdefghijklmnopqrstuvwxyz':
                     if ord(n) + k >= 122:
                         return chr((ord(n) + k) - 26)
                     else:
                         return chr(ord(n) + k)
 
-                elif n in 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z':
+                elif n in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
                     if ord(n) + k >= 90:
                         return chr((ord(n) + k) - 26)
                     else:
