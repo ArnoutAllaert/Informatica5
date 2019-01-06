@@ -41,7 +41,7 @@ def versleutel(n, k):
 
             if is_letter(n) == True:
                 if n in 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z':
-                    if ord(ln) + k >= 122:
+                    if ord(n) + k >= 122:
                         return chr((ord(n) + k) - 26)
                     else:
                         return chr(ord(n) + k)
