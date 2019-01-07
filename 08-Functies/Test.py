@@ -1,13 +1,19 @@
-appel = 'appel'
-banaan = 'banaan'
-kers = 'kers'
+def volgend_collatz_getal(n):
+    if n % 2 == 0:
+        volgend = n // 2
+    else:
+        volgend = (n * 3) + 1
+    return volgend
 
-def print_fruit():
-    appel = 'olifant'
-    banaan = 'aapje'
-    kers = 'goucvis'
-    print(appel, banaan, kers)
 
-print_fruit()
+def collatz(n):
+    collatz = 1
+    while volgend_collatz_getal(n) != 1 and n != 1:
+        collatz += 1
+        n = volgend_collatz_getal(n)
+    if n == 1:
+        collatz = 1
+    elif volgend_collatz_getal(n) == 1:
+        collatz += 1
 
-print(appel, banaan, kers)
+    return collatz
