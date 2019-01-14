@@ -7,17 +7,23 @@ def positie_laagste_ascii(woord):
 
 def sorteer(woord):
     gesorteerd = ''
-    laag = 'z'
+    laag = 500
+    hoog = 1
     for letter in woord:
-    ### letter is bv. 'k' en gesorteerd = 'abl', dan moet gesorteerd 'abkl' worden en niet 'ablk'
-        #for i in gesorteerd:
-           #if ord(letter) <= ord(i):
-               #gesorteerd = gesorteerd[:woord.find(i) - 1] + letter + gesorteerd[woord.find(i):]
-        if ord(letter) <= ord(laag):
-            gesorteerd = letter + gesorteerd
-            laag = letter
-        else:
-            gesorteerd += letter
+        if ord(letter) <= laag:
+            if ord(letter) >= hoog:
+                gesorteerd = letter + gesorteerd
+                laag = ord(letter)
+                hoog = ord(letter)
+            else:
+                gesorteerd = letter + gesorteerd
+                laag = ord(letter)
+        elif ord(letter) > laag:
+            if ord(letter) >= hoog:
+                gesorteerd += letter
+                hoog = ord(letter)
+            else:
+                gesorteerd = gesorteerd[:gesorteerd.find(chr(hoog)) -1] + letter + gesorteerd[gesorteerd.find(chr(hoog)):]
     return gesorteerd
 
 def is_alfabetisch(woord):
