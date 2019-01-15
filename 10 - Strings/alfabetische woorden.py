@@ -7,23 +7,15 @@ def positie_laagste_ascii(woord):
 
 def sorteer(woord):
     gesorteerd = ''
-    laag = 500
-    hoog = 1
     for letter in woord:
-        if ord(letter) <= laag:
-            if ord(letter) >= hoog:
-                gesorteerd = letter + gesorteerd
-                laag = ord(letter)
-                hoog = ord(letter)
-            else:
-                gesorteerd = letter + gesorteerd
-                laag = ord(letter)
-        elif ord(letter) > laag:
-            if ord(letter) >= hoog:
-                gesorteerd += letter
-                hoog = ord(letter)
-            else:
-                gesorteerd = gesorteerd[:gesorteerd.find(chr(hoog)) -1] + letter + gesorteerd[gesorteerd.find(chr(hoog)):]
+        laag = 'z'
+        for letter in woord:
+            if ord(letter) < ord(laag):
+                laag = letter
+
+        gesorteerd += laag
+        a = woord.find(laag)
+        woord = woord[0:a] + woord[a + 1:]
     return gesorteerd
 
 def is_alfabetisch(woord):
@@ -33,4 +25,4 @@ def is_alfabetisch(woord):
         mes = False
     return mes
 
-print(sorteer('9 * (7 - 2) = 45'))
+print(sorteer('drenkeling'))

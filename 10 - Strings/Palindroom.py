@@ -11,5 +11,4 @@ def is_palindroom(woord):
     return mes
 
 
-
 print(is_palindroom('winstoogmerk'))
