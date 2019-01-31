@@ -26,15 +26,33 @@
 #            nieuwe_zin += versleutel_woord(letter, n)
 #    return nieuwe_zin
 
-def versleutelde_woorden(woord, n):
-    versleuteld_woord = ''
+def versleutel_woord(woord, n):
+    code = ''
     woord = woord.upper()
     for letter in woord:
-        versleutelde_letter = chr(ord(letter) + n)
-        if versleutelde_letter == '@':
-            versleutelde_letter = ' '
-        versleuteld_woord += versleutelde_letter
+        code_letter = chr(ord(letter) + n)
 
-    return versleuteld_woord
+        if code_letter == '@':
+            code_letter = ' '
+        code += code_letter
 
-print(versleutelde_woorden('?kaas?', 1))
+    return code
+
+def versleutel_zin(zin, n):
+    index_spatie = zin.find(' ')
+    code = ''
+
+    while index_spatie != -1:
+        woord = zin[:index_spatie]
+        zin = zin[index_spatie + 1:]
+
+        code += '@' + versleutel_woord(woord, n)
+        index_spatie = zin.find(' ')
+
+    if len(zin) > 0:
+        code += '@' + versleutel_woord(zin, n)
+
+    return code
+
+
+print(versleutel_zin('er is niemand thuis zzz 9810.', 1))
