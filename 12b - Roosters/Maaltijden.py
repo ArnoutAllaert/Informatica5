@@ -5,7 +5,7 @@ def dagprijs(tuple):
             prijs += tuple[i + 1] * 5.3
         elif tuple[i] == 'soep':
             prijs += tuple[i +1] * 1.7
-        elif tuple[i] == 'vieruurtje':
+        else:
             prijs += tuple[i + 1] * 2.3
     return prijs
 
