@@ -17,7 +17,7 @@ def verf_verzamelen(lijst):
     a = 0
     while a < len(lijst):
         if r == b == g and r != 0:
-            a += 1000000000
+            a = len(lijst)
         elif lijst[a] == 'rood':
             r += 1
         elif lijst[a] == 'groen':
