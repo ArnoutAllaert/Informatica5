@@ -20,9 +20,9 @@ def woorden_per_frequentie(zin):
 
 def meest_gebruikte_woorden(zin):
     zin = woorden_per_frequentie(zin)
-    waarden = ()
-    for key, value in zin.items():
-        waarden += (key, 0)
+    waarden = []
+    for key in zin.keys():
+        waarden += [key]
     hoogste = max(waarden)
     return zin[hoogste]
 
