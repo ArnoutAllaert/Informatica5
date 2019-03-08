@@ -9,14 +9,15 @@ def woord_frequentie(zin):
     return aantal
 
 def woorden_per_frequentie(zin):
-    frequentie = {}
-    for v in woord_frequentie(zin).values():
-        if v in frequentie:
-            frequentie[v] += [woord_frequentie(zin).keys(v)]
+    zin =  woord_frequentie(zin)
+    kaas = {}
+    for key, value in zin.items():
+        if value in kaas:
+            kaas[value] += [key]
         else:
-            frequentie[v] = [woord_frequentie(zin).keys(v)]
+            kaas[value] = [key]
+    return kaas
 
-    return frequentie
 
 print(woorden_per_frequentie('Dit is een zin. En nog een zin. En een laatste zin.'))
 #{1: ['dit', 'is', 'nog', 'laatste'], 3: ['een', 'zin'], 2: ['en']}
