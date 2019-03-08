@@ -1,5 +1,5 @@
 def woord_frequentie(zin):
-    woorden = zin.replace('.','').lower().split()
+    woorden = zin.replace('.', '').lower().split()
     aantal = {}
     for i in woorden:
         if i in aantal:
@@ -9,7 +9,7 @@ def woord_frequentie(zin):
     return aantal
 
 def woorden_per_frequentie(zin):
-    zin =  woord_frequentie(zin)
+    zin = woord_frequentie(zin)
     kaas = {}
     for key, value in zin.items():
         if value in kaas:
@@ -18,6 +18,13 @@ def woorden_per_frequentie(zin):
             kaas[value] = [key]
     return kaas
 
+def meest_gebruikte_woorden(zin):
+    zin = woorden_per_frequentie(zin)
+    waarden = ()
+    for key, value in zin.items():
+        waarden += (key, 0)
+    hoogste = max(waarden)
+    return zin[hoogste]
 
-print(woorden_per_frequentie('Dit is een zin. En nog een zin. En een laatste zin.'))
-#{1: ['dit', 'is', 'nog', 'laatste'], 3: ['een', 'zin'], 2: ['en']}
+print(meest_gebruikte_woorden('Dit is een zin. En nog een zin. En een laatste zin.'))
+#['een', 'zin']
