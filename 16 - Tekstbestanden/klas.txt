@@ -11,3 +11,5 @@ Arnout
 Simon
 Hendrik
 Dominiek
+Alice
+Baptiste
