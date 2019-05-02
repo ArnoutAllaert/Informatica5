@@ -1,6 +1,5 @@
 def vergeten_woorden(tekst, verplicht):
-    lijst = tekst.split()
-    kaas = set(lijst)
+    kaas = set(tekst.split())
     woorden = kaas.intersection(verplicht)
 
     return len(verplicht), len(verplicht) - len(woorden), len(woorden)
