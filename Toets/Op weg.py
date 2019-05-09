@@ -6,16 +6,12 @@ def bestaat_weg(stad1, stad2, kaart):
 def geen_dubbelburen(stad1, stad2, kaart):
     x = kaart[stad1]
     y = kaart[stad2]
-    kaas = y.difference(x)
     plopkoek = x.difference(y)
-    if stad1 in plopkoek:
-        plopkoek.remove(stad1)
-    elif stad2 in plopkoek:
+    kaas = y.difference(x)
+    if stad2 in plopkoek:
         plopkoek.remove(stad2)
     if stad1 in kaas:
         kaas.remove(stad1)
-    elif stad2 in kaas:
-        kaas.remove(stad2)
     return kaas.union(plopkoek)
 
 def bereikbaarheid_meest_afgelegen_stad(kaart):
@@ -34,6 +30,10 @@ def bestaat_route(route, kaart):
             i += len(route)
     return i < len(route)
 
+print(geen_dubbelburen('Brussel', 'Hasselt', kaart))
+#{'Antwerpen'}
+print(geen_dubbelburen('Antwerpen', 'Kortrijk', kaart))
+#{'Brussel', 'Brugge'}
 
 print(bestaat_route(['Hasselt', 'Brussel', 'Antwerpen', 'Brugge', 'Gent', 'Kortrijk'], kaart))
 #True
