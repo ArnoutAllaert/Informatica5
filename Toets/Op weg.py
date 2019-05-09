@@ -27,15 +27,12 @@ def bereikbaarheid_meest_afgelegen_stad(kaart):
 
 def bestaat_route(route, kaart):
     i = 0
-    kaas = True
     while i < (len(route) - 1):
         if route[i+1] in kaart[route[i]]:
-            kaas = True
             i += 1
         else:
             i += len(route)
-            kaas = False
-    return kaas
+    return i < len(route)
 
 
 print(bestaat_route(['Hasselt', 'Brussel', 'Antwerpen', 'Brugge', 'Gent', 'Kortrijk'], kaart))
