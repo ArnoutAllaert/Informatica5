@@ -1,3 +1,13 @@
+from time import time
+from random import randint
+import matplotlib.pyplot as plt
+
+def genereer_rij(aantal):
+    rij = []
+    for i in range(aantal):
+        rij.append(randint(0, aantal))
+    return rij
+
 def insertion_sort(a):
     for j in range(1, len(a)):
         key = a[j]
@@ -9,8 +19,22 @@ def insertion_sort(a):
 
     return a
 
-rij = [6, 2, 5, 1, 4, 3]
+i, n, t = 10, [], []
 
-print(insertion_sort(rij))
+while i < 10000:
 
+    rij = genereer_rij(i)
 
+    start = time()
+    rij = insertion_sort(rij)
+    stop = time()
+    n.append(i)
+    t.append(stop - start)
+
+    i*= 2
+
+plt.plot(n, t, '-ro')
+plt.title('insertion sort')
+plt.xlabel('N')
+plt.ylabel('t')
+plt.show()
